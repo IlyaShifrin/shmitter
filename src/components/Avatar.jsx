@@ -1,7 +1,7 @@
 import {useContext} from "react";
 import {TwitterContext} from "../utils/context.js";
 
-const Avatar = () => {
+const Avatar = ({size}) => {
     const {user} = useContext(TwitterContext);
 
     return (
