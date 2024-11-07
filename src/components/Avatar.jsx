@@ -1,4 +1,9 @@
-const Avatar = ({user, size}) => {
+import {useContext} from "react";
+import {TwitterContext} from "../utils/context.js";
+
+const Avatar = () => {
+    const {user} = useContext(TwitterContext);
+
     return (
         <img className={`user-avatar ${size ?? ''}`} src={user.avatar} alt={user.name}/>
     );
