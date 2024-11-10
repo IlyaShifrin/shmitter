@@ -6,8 +6,8 @@ const Avatar = ({size}) => {
 
     const changeAvatar = () => {
         const linkAvatar = prompt('Enter a link of a new avatar');
-        const user = {avatar: linkAvatar, name: 'New avatar'};
-        setUser(user);
+        user.avatar = linkAvatar;
+        setUser({avatar: linkAvatar, name: user.name});
     }
 
     return (
