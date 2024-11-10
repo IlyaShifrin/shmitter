@@ -16,8 +16,8 @@ function App() {
 
     return (
         <div className={'app'}>
-            <Navigation user={user}/>
-            <Body user={user} stats={stats}/>
+            <Navigation user={user} setUser={setUser} />
+            <Body user={user} setUser={setUser} stats={stats}/>
         </div>
     )
 }
