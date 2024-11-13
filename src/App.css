@@ -63,3 +63,7 @@
   justify-content: space-around;
   margin-bottom: 10px;
 }
+
+.cursor {
+  cursor: pointer;
+}

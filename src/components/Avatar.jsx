@@ -5,15 +5,21 @@ const Avatar = ({size}) => {
     const {user, setUser} = useContext(TwitterContext);
 
     const changeAvatar = () => {
-        const linkAvatar = prompt('Enter a link of a new avatar');
-        user.avatar = linkAvatar;
-        setUser({avatar: linkAvatar, name: user.name});
+        const linkAvatar = prompt('Enter a link of new avatar');
+        setUser({...user, avatar: linkAvatar || user.avatar});
+    }
+
+    const changeName = (e) => {
+        e.preventDefault();
+        const name = prompt('Enter new name');
+        setUser({...user, name: name || user.name});
     }
 
     return (
         <img className={`user-avatar ${size ?? ''}`}
-            onClick={changeAvatar}
-            src={user.avatar} alt={user.name}/>
+             onClick={changeAvatar}
+             onContextMenu={changeName}
+             src={user.avatar} alt={user.name}/>
     );
 };
 

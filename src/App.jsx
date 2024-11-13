@@ -11,14 +11,14 @@ function App() {
     });
 
     const [stats, setStats] = useState({
-        followers: 10,
-        following: 100
+        followers: 0,
+        following: 0
     });
 
     return (
         <div className={'app'}>
             <TwitterContext.Provider value={{
-                user, stats, setUser
+                user, stats, setUser, setStats
             }}>
                 <Navigation/>
                 <Body/>
